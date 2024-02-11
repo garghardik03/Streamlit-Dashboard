@@ -73,3 +73,24 @@ if not st.sidebar.checkbox("Close", True, key='3'):
     plt.yticks([])
     st.set_option('deprecation.showPyplotGlobalUse', False)
     st.pyplot()
+
+# Display sentiment analysis statistics
+st.subheader("Sentiment Analysis Statistics")
+st.write("Total Tweets:", len(data))
+st.write("Positive Tweets:", len(
+    data[data['airline_sentiment'] == 'positive']))
+st.write("Neutral Tweets:", len(data[data['airline_sentiment'] == 'neutral']))
+st.write("Negative Tweets:", len(
+    data[data['airline_sentiment'] == 'negative']))
+
+# Interactive scatter plot
+st.sidebar.subheader("Interactive Scatter Plot")
+x_feature = st.sidebar.selectbox(
+    "X-axis feature", data.select_dtypes(include=np.number).columns, key='x_feature')
+y_feature = st.sidebar.selectbox(
+    "Y-axis feature", data.select_dtypes(include=np.number).columns, key='y_feature')
+if not st.sidebar.checkbox("Hide", True, key='scatter_checkbox'):
+    st.markdown("### Interactive Scatter Plot")
+    fig_scatter = px.scatter(
+        data, x=x_feature, y=y_feature, color='airline_sentiment')
+    st.plotly_chart(fig_scatter)

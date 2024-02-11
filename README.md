@@ -1,8 +1,8 @@
-# SkySense - Analyzing Sentiment of Tweets about US Airlines
+### SkySense - Analyzing Sentiment of Tweets about US Airlines
 
-SkySense is a Streamlit application for analyzing the sentiment of tweets about US airlines. It provides interactive visualizations of tweet sentiment distribution, sentiment analysis by airline, and word clouds for different sentiment categories.
+SkySense is a Streamlit application for analyzing the sentiment of tweets about US airlines. It provides interactive visualizations of tweet sentiment distribution, sentiment analysis by airline, and word clouds for different sentiment categories. Additionally, it displays sentiment analysis statistics and an interactive scatter plot for exploring the relationship between numerical features.
 
-## How to Run the Application
+#### How to Run the Application
 
 1. Clone this repository to your local machine.
 2. Install the required Python packages listed in `requirements.txt` by running:
@@ -15,27 +15,11 @@ SkySense is a Streamlit application for analyzing the sentiment of tweets about 
    streamlit run app.py
    ```
 
+#### Functionality Overview
 
-## Functionality Overview
-
-### Random Tweets Display
-
-- Use the sidebar radio button to select a sentiment category (positive, neutral, negative).
-- View a random tweet belonging to the selected sentiment category.
-
-### Number of Tweets by Sentiment
-
-- Choose between a histogram or pie chart visualization of the tweet distribution by sentiment category.
-- Toggle the visibility of this section using the "Hide" checkbox.
-
-### Total Number of Tweets by Sentiment for Each Airline
-
-- Select one or more airlines from the multiselect dropdown to filter the tweet data.
-- Visualize the distribution of tweet sentiment for each selected airline using a facetted histogram.
-- Toggle the visibility of this section using the "Hide" checkbox.
-
-### Word Cloud
-
-- Choose the sentiment category (positive, neutral, negative) for which you want to display the word cloud.
-- View the word cloud visualization representing the most frequent words in tweets of the selected sentiment category.
-- Toggle the visibility of this section using the "Close" checkbox.
+1. **Random Tweets Display**: Displays a random tweet based on selected sentiment (positive, neutral, negative).
+2. **Number of Tweets by Sentiment**: Provides visualizations (histogram or pie chart) of tweet distribution by sentiment category.
+3. **Total Number of Tweets by Sentiment for Each Airline**: Shows the distribution of tweet sentiment for selected airlines.
+4. **Word Cloud**: Generates a word cloud visualization representing the most frequent words in tweets of the selected sentiment category.
+5. **Sentiment Analysis Statistics**: Displays statistics about the sentiment analysis results, including the total number of tweets and counts for each sentiment category.
+6. **Interactive Scatter Plot**: Allows users to explore the relationship between two numerical features with a scatter plot.
